@@ -24,9 +24,16 @@ class Home extends StatelessWidget {
       {'name': "md nahid", 'phone': "01703695787"},
       {'name': "tusar", 'phone': "0170367375"},
       {'name': "naism", 'phone': "01343697575"},
+      {'name': "md nasim", 'phone': "01703697575"},
+      {'name': "mst jakia", 'phone': "0144597575"},
+      {'name': "md nahid", 'phone': "01703695787"},
+      {'name': "tusar", 'phone': "0170367375"},
+      {'name': "naism", 'phone': "01343697575"},
     ];
     return Scaffold(
-      appBar: AppBar(title: Text("Contact"), centerTitle: true),
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
+          title: Text("Contact"), centerTitle: true),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -70,12 +77,15 @@ class Home extends StatelessWidget {
                 itemCount: details.length,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    trailing: Icon(Icons.phone),
-                    title: Text(details[index]['name']),
+                    trailing: Icon(Icons.phone,color:Colors.blue,),
+                    title: Text(
+                      details[index]['name'],
+                      style: TextStyle(color: Colors.red),
+                    ),
                     subtitle: Text(details[index]['phone']),
-                    leading: CircleAvatar(
+                    leading: CircleAvatar(radius:25,
                       backgroundColor: Colors.grey.shade300,
-                      child: Icon(Icons.person),
+                      child: Icon(Icons.person,),
                     ),
                   );
                 },
